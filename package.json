@@ -19,6 +19,7 @@
     "eject": "react-scripts eject",
     "deploy": "gh-pages -d build"
   },
+  "homepage": "https://projectwibbas.github.io/nuddinyore/",
   "eslintConfig": {
     "extends": [
       "react-app",
