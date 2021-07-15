@@ -20,6 +20,7 @@ const StyledSpan = styled.span`
   text-align: center;
   color: white;
 
+  transition: font-size 1s;
   :hover,
   :active {
     font-size: 4rem;
@@ -33,13 +34,20 @@ const StyledSpan = styled.span`
     overflow: visible;
   }
 `;
+function sleep(ms) {
+  return new Promise((resolve) => setTimeout(resolve, ms));
+}
 
 function Bait(props) {
   const [isHover, setHover] = useState(0);
+  async function sleepSetHover(ms, state) {
+    await sleep(ms);
+    setHover(state);
+  }
   return (
     <StyledSpan
-      onMouseEnter={() => setHover(1)}
-      onMouseLeave={() => setHover(0)}
+      onMouseEnter={() => sleepSetHover(10, 1)}
+      onMouseLeave={() => sleepSetHover(500, 0)}
     >
       {isHover ? props.gotted : props.bait}
     </StyledSpan>
