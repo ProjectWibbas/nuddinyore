@@ -24,6 +24,13 @@ const StyledSpan = styled.span`
   :active {
     font-size: 4rem;
     transition: font-size 1s;
+    min-width: 0;
+    min-height: 0;
+    overflow: auto;
+  }
+
+  @media (min-width: 640px) {
+    overflow: visible;
   }
 `;
 
