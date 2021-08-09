@@ -20,7 +20,7 @@
     "predeploy": "yarn build",
     "deploy": "gh-pages -d build"
   },
-  "homepage": "https://projectwibbas.github.io/nuddinyore/",
+  "homepage": "https://ligma.wbba.xyz",
   "eslintConfig": {
     "extends": [
       "react-app",
